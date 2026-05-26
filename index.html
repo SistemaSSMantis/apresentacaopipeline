@@ -148,6 +148,81 @@
     <p>O seu cliente quer resposta na hora. Mas se você ou sua equipe estão sobrecarregados na operação, o WhatsApp fica parado e a venda esfria. Descubra como a IA tria, qualifica e agenda os leads automaticamente para o seu fechamento.</p>
 </section>
 
+<!-- DEMONSTRAÇÃO EM TEMPO REAL -->
+<section class="py-12">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="badge">Demonstração Interativa Multisector</div>
+        <h2>Veja como a IA atua no seu nicho</h2>
+        <p class="text-slate-400 text-sm">Simule o clique no site e veja a IA receber o contexto, qualificar e preparar a venda — seja você do Varejo, Indústria, Serviços ou Energia.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <!-- PRODUTOS DO SITE (DIVERSOS NICHOS) -->
+        <div class="lg:col-span-5 space-y-3">
+            
+            <!-- PRODUTO 1: ENERGIA SOLAR -->
+            <button onclick="startFlow('solar', 'Projeto de Energia Solar Fotovoltaica', 'Especificações: Sistema On-Grid residencial ou comercial. Redução de até 95% na conta de luz.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
+                <div>
+                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Energia Solar (Integradores)</h5>
+                    <span class="text-[11px] text-slate-500">Projetos Fotovoltaicos</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
+            </button>
+
+            <!-- PRODUTO 2: VAREJO / MATERIAIS DE CONSTRUÇÃO -->
+            <button onclick="startFlow('construcao', 'Materiais de Construção & Acabamentos', 'Especificações: Orçamento de cimento, argamassa, porcelanatos e tintas para obra.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
+                <div>
+                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Material de Construção (Varejo)</h5>
+                    <span class="text-[11px] text-slate-500">Orçamentos Rápidos p/ Obras</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
+            </button>
+
+            <!-- PRODUTO 3: FÁBRICA / CALÇADOS -->
+            <button onclick="startFlow('calcados', 'Catálogo Atacadista de Calçados', 'Especificações: Pedidos em lote para revendedores, lojistas e distribuidores.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
+                <div>
+                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Fábrica de Calçados (Indústria)</h5>
+                    <span class="text-[11px] text-slate-500">Atendimento a Revendedores e Lojas</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
+            </button>
+
+            <!-- PRODUTO 4: SERVIÇOS PREMIUM (TELHADOS/IMPERMEABILIZAÇÃO) -->
+            <button onclick="startFlow('premium', 'Serviços Premium', 'Especificações: Manutenção de rufos, telhados embutidos e impermeabilização.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
+                <div>
+                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Serviços Premium (Telhados)</h5>
+                    <span class="text-[11px] text-slate-500">Impermeabilização e Manutenção</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
+            </button>
+
+        </div>
+
+        <!-- WHATSAPP MOCKUP -->
+        <div class="lg:col-span-7">
+            <div class="phone-mockup">
+                <div class="chat-header">
+                    <div class="avatar">IA</div>
+                    <div>
+                        <h4 style="font-size: 13px; font-weight: 700;">Assistente IA - Sua Empresa</h4>
+                        <span style="font-size: 10px; color: var(--accent);">Triagem Ativa de Leads</span>
+                    </div>
+                </div>
+                <div id="chat-body-flow" class="chat-body flex flex-col gap-3">
+                    <div class="text-center text-[10px] text-slate-500 my-4 bg-slate-950 py-1.5 px-3 rounded-md w-fit mx-auto">
+                        Selecione o seu setor à esquerda para ver a IA atuando na prática
+                    </div>
+                </div>
+                <!-- BOTÕES DE AGENDAMENTO -->
+                <div id="chat-actions" class="p-3 bg-slate-950 border-t border-slate-900 flex justify-center gap-2 hidden">
+                    <button id="btn-opt1" onclick="confirmAppointment(1)" class="bg-amber-500 text-black text-[11px] font-bold py-2 px-4 rounded-full hover:bg-amber-400 transition-all"></button>
+                    <button id="btn-opt2" onclick="confirmAppointment(2)" class="bg-amber-500 text-black text-[11px] font-bold py-2 px-4 rounded-full hover:bg-amber-400 transition-all"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ANALISE COMPARATIVA DIRETA -->
 <section class="grid lg:grid-cols-2 gap-8 items-stretch pt-4">
     <!-- O PROBLEMA IDENTIFICADO -->
@@ -187,108 +262,6 @@
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Triagem inteligente: contexto, dados e fotos recebidas antes do "Olá".</li>
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Agendamento do contato direto com o vendedor focado no fechamento.</li>
             </ul>
-        </div>
-    </div>
-</section>
-
-<!-- DEMONSTRAÇÃO EM TEMPO REAL -->
-<section class="py-12">
-    <div class="text-center max-w-3xl mx-auto mb-10">
-        <div class="badge">Demonstração Interativa Multisector</div>
-        <h2>Veja como a IA atua no seu nicho</h2>
-        <p class="text-slate-400 text-sm">Simule o clique no site e veja a IA receber o contexto, qualificar e preparar a venda — seja você do Varejo, Indústria, Serviços ou Energia.</p>
-    </div>
-
-    <div class="grid lg:grid-cols-12 gap-8 items-start">
-        <!-- PRODUTOS DO SITE (DIVERSOS NICHOS) -->
-        <div class="lg:col-span-5 space-y-3">
-            
-            <!-- PRODUTO 1: ENERGIA SOLAR -->
-            <button onclick="startFlow('solar', 'Projeto de Energia Solar Fotovoltaica', 'Especificações: Sistema On-Grid residencial ou comercial. Redução de até 95% na conta de luz.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
-                <div>
-                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Energia Solar (Integradores)</h5>
-                    <span class="text-[11px] text-slate-500">Projetos Fotovoltaicos</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
-            </button>
-
-            <!-- PRODUTO 2: VAREJO / MATERIAIS DE CONSTRUÇÃO -->
-            <button onclick="startFlow('construcao', 'Materiais de Construção & Acabamentos', 'Especificações: Orçamento de cimento, argamassa, porcelanatos e tintas para obra.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
-                <div>
-                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Material de Construção (Varejo)</h5>
-                    <span class="text-[11px] text-slate-500">Orçamentos Rápidos p/ Obras</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
-            </button>
-
-            <!-- PRODUTO 3: FÁBRICA / CALÇADOS -->
-            <button onclick="startFlow('calcados', 'Catálogo Atacadista de Calçados', 'Especificações: Pedidos em lote para revendedores, lojistas e distribuidores.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
-                <div>
-                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Fábrica de Calçados (Indústria)</h5>
-                    <span class="text-[11px] text-slate-500">Atendimento a Revendedores e Lojas</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
-            </button>
-            
-            <!-- PRODUTO 4: HIGIENIZAÇÃO -->
-            <button onclick="startFlow('higienizacao', 'Higienização e Impermeabilização', 'Especificações: Limpeza a seco de estofados, sofás retráteis e proteção de tecidos.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
-                <div>
-                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Higienização Profissional</h5>
-                    <span class="text-[11px] text-slate-500">Estofados e Serviços</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
-            </button>
-
-            <!-- PRODUTO 5: ADESTRADOR DE CACHORROS -->
-            <button onclick="startFlow('adestramento', 'Adestramento e Comportamento Canino', 'Especificações: Avaliação comportamental, obediência básica e resolução de problemas.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
-                <div>
-                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Adestramento de Cães</h5>
-                    <span class="text-[11px] text-slate-500">Serviços Pet / Comportamento</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
-            </button>
-
-            <!-- PRODUTO 6: IMOBILIÁRIAS -->
-            <button onclick="startFlow('imobiliaria', 'Consultoria Imobiliária', 'Especificações: Compra, venda ou locação. Agendamento de visita a imóveis.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
-                <div>
-                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Imobiliárias e Corretores</h5>
-                    <span class="text-[11px] text-slate-500">Compra, Venda e Locação</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
-            </button>
-
-            <!-- PRODUTO 7: QUIROPRAXIA -->
-            <button onclick="startFlow('quiropraxia', 'Sessão de Quiropraxia', 'Especificações: Avaliação postural, ajustes articulares e alívio de dores na coluna.')" class="w-full text-left bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-amber-500 transition-all flex justify-between items-center group">
-                <div>
-                    <h5 class="font-bold text-slate-100 group-hover:text-amber-400 text-sm">Clínica de Quiropraxia</h5>
-                    <span class="text-[11px] text-slate-500">Saúde e Bem-estar Físico</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all"></i>
-            </button>
-
-        </div>
-
-        <!-- WHATSAPP MOCKUP -->
-        <div class="lg:col-span-7">
-            <div class="phone-mockup">
-                <div class="chat-header">
-                    <div class="avatar">IA</div>
-                    <div>
-                        <h4 style="font-size: 13px; font-weight: 700;">Assistente IA - Sua Empresa</h4>
-                        <span style="font-size: 10px; color: var(--accent);">Triagem Ativa de Leads</span>
-                    </div>
-                </div>
-                <div id="chat-body-flow" class="chat-body flex flex-col gap-3">
-                    <div class="text-center text-[10px] text-slate-500 my-4 bg-slate-950 py-1.5 px-3 rounded-md w-fit mx-auto">
-                        Selecione o seu setor à esquerda para ver a IA atuando na prática
-                    </div>
-                </div>
-                <!-- BOTÕES DE AGENDAMENTO -->
-                <div id="chat-actions" class="p-3 bg-slate-950 border-t border-slate-900 flex justify-center gap-2 hidden">
-                    <button id="btn-opt1" onclick="confirmAppointment(1)" class="bg-amber-500 text-black text-[11px] font-bold py-2 px-4 rounded-full hover:bg-amber-400 transition-all"></button>
-                    <button id="btn-opt2" onclick="confirmAppointment(2)" class="bg-amber-500 text-black text-[11px] font-bold py-2 px-4 rounded-full hover:bg-amber-400 transition-all"></button>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -1120,12 +1093,279 @@
     let opt1 = "";
     let opt2 = "";
     let selectedProd = "";
+    let currentFlowKey = "";
 
     function startFlow(key, productName, spec) {
         selectedProd = productName;
+        currentFlowKey = key;
         const chatBody = document.getElementById('chat-body-flow');
         const chatActions = document.getElementById('chat-actions');
         chatActions.classList.add('hidden');
+
+        // NOVO FLUXO ESPECÍFICO PARA SERVIÇOS PREMIUM (TELHADOS/IMPERMEABILIZAÇÃO)
+        if (key === 'premium') {
+            chatBody.innerHTML = `
+                <div class="text-center text-[10px] text-slate-500 my-2 bg-slate-950 py-1 px-3 rounded-md w-fit mx-auto">
+                    Lead clicou no Anúncio High Ticket
+                </div>
+                <div class="msg sent opacity-0" id="msg-sent-lead-p">
+                    Eu vim através do anúncio, quero tirar dúvidas sobre o problema de impermeabilização no meu telhado.
+                </div>
+                <div class="msg received hidden" id="msg-typing-p1">
+                    <span class="animate-pulse">Digitando...</span>
+                </div>
+            `;
+            
+            setTimeout(() => {
+                const el = document.getElementById('msg-sent-lead-p');
+                if(el) el.classList.remove('opacity-0');
+            }, 300);
+            
+            // Passo 2: IA Saúda e pergunta
+            setTimeout(() => {
+                const typing = document.getElementById('msg-typing-p1');
+                if(typing) typing.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    if (typing) typing.classList.add('hidden');
+                    chatBody.insertAdjacentHTML('beforeend', `
+                        <div class="msg received">
+                            Olá, tudo bem, Marcos? Aqui nós falamos da empresa Manutenções de telhados e impermeabilização.<br><br>
+                            Para eu entender melhor o seu caso e enviar a solução correta, o que exatamente está acontecendo no seu imóvel?
+                        </div>
+                    `);
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                    
+                    // Passo 3: Lead envia áudio
+                    setTimeout(() => {
+                        chatBody.insertAdjacentHTML('beforeend', `
+                            <div class="msg sent">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-play text-slate-700 bg-white p-1.5 rounded-full text-[10px]"></i>
+                                    <div class="flex gap-[2px] items-end h-3 opacity-80">
+                                        <div class="w-[3px] h-1 bg-white rounded-full"></div>
+                                        <div class="w-[3px] h-2 bg-white rounded-full"></div>
+                                        <div class="w-[3px] h-3 bg-white rounded-full"></div>
+                                        <div class="w-[3px] h-2 bg-white rounded-full"></div>
+                                        <div class="w-[3px] h-1 bg-white rounded-full"></div>
+                                        <div class="w-[3px] h-3 bg-white rounded-full"></div>
+                                        <div class="w-[3px] h-2 bg-white rounded-full"></div>
+                                    </div>
+                                    <span class="text-[9px] text-slate-200 ml-1">0:25</span>
+                                </div>
+                            </div>
+                        `);
+                        chatBody.insertAdjacentHTML('beforeend', `<div class="msg received hidden" id="msg-typing-p2"><span class="animate-pulse">Ouvindo áudio...</span></div>`);
+                        chatBody.scrollTop = chatBody.scrollHeight;
+                        
+                        setTimeout(() => {
+                            const t2 = document.getElementById('msg-typing-p2');
+                            if(t2) t2.classList.remove('hidden');
+                        }, 1000);
+
+                        // Passo 4: IA confirma o problema ouvido no áudio
+                        setTimeout(() => {
+                            const t2 = document.getElementById('msg-typing-p2');
+                            if(t2) t2.classList.add('hidden');
+                            
+                            chatBody.insertAdjacentHTML('beforeend', `
+                                <div class="msg received">
+                                    Entendi perfeitamente, Marcos. Então você está com infiltração na laje, precisa de manutenção nas calhas e também um cuidado especial nessa parte do beiral, por conta do telhado invisível (embutido). É isso mesmo que está acontecendo?
+                                </div>
+                            `);
+                            chatBody.scrollTop = chatBody.scrollHeight;
+                            
+                            // Passo 5: Lead confirma
+                            setTimeout(() => {
+                                chatBody.insertAdjacentHTML('beforeend', `<div class="msg sent">Isso, exatamente isso.</div>`);
+                                chatBody.insertAdjacentHTML('beforeend', `<div class="msg received hidden" id="msg-typing-p3"><span class="animate-pulse">Digitando...</span></div>`);
+                                chatBody.scrollTop = chatBody.scrollHeight;
+                                
+                                setTimeout(() => {
+                                    const t3 = document.getElementById('msg-typing-p3');
+                                    if(t3) t3.classList.remove('hidden');
+                                }, 500);
+
+                                // Passo 6: IA pede endereço
+                                setTimeout(() => {
+                                    const t3 = document.getElementById('msg-typing-p3');
+                                    if(t3) t3.classList.add('hidden');
+                                    
+                                    chatBody.insertAdjacentHTML('beforeend', `<div class="msg received">Perfeito. Qual é o seu endereço completo para eu verificar a logística?</div>`);
+                                    chatBody.scrollTop = chatBody.scrollHeight;
+                                    
+                                    // Passo 7: Lead envia endereço e IA explica custo da visita
+                                    setTimeout(() => {
+                                        chatBody.insertAdjacentHTML('beforeend', `<div class="msg sent">Fiedes Golvone, na Morro das Pedras, Florianópolis.</div>`);
+                                        chatBody.insertAdjacentHTML('beforeend', `<div class="msg received hidden" id="msg-typing-p4"><span class="animate-pulse">Digitando...</span></div>`);
+                                        chatBody.scrollTop = chatBody.scrollHeight;
+
+                                        setTimeout(() => {
+                                            const t4 = document.getElementById('msg-typing-p4');
+                                            if(t4) t4.classList.remove('hidden');
+                                        }, 1000);
+
+                                        setTimeout(() => {
+                                            const t4 = document.getElementById('msg-typing-p4');
+                                            if(t4) t4.classList.add('hidden');
+                                            
+                                            chatBody.insertAdjacentHTML('beforeend', `
+                                                <div class="msg received">
+                                                    Confirma para mim, por favor, o endereço é Fideles Golvone ou Fied Golvone? E qual é o número da casa e ponto de referência, por favor?
+                                                </div>
+                                            `);
+                                            chatBody.scrollTop = chatBody.scrollHeight;
+                                            
+                                            // Passo 7.5: Lead confirma nome correto, número e referência
+                                            setTimeout(() => {
+                                                chatBody.insertAdjacentHTML('beforeend', `<div class="msg sent">Fideles Golvone, 290, ponto de referência é perto do frango assado.</div>`);
+                                                chatBody.insertAdjacentHTML('beforeend', `<div class="msg received hidden" id="msg-typing-p4-5"><span class="animate-pulse">Digitando...</span></div>`);
+                                                chatBody.scrollTop = chatBody.scrollHeight;
+
+                                                setTimeout(() => {
+                                                    const t4_5 = document.getElementById('msg-typing-p4-5');
+                                                    if(t4_5) t4_5.classList.remove('hidden');
+                                                }, 1000);
+
+                                                setTimeout(() => {
+                                                    const t4_5 = document.getElementById('msg-typing-p4-5');
+                                                    if(t4_5) t4_5.classList.add('hidden');
+
+                                                    chatBody.insertAdjacentHTML('beforeend', `
+                                                        <div class="msg received">
+                                                            Fideles Golvone, 290, perto do frango assado. Vou fazer uma pequena consulta na nossa agenda para confirmar o horário.<br><br>
+                                                            Marcos, para esse nível de trabalho, precisamos realizar uma visita técnica presencial. É cobrado um valor referente à vistoria técnica antes de iniciarmos o serviço, para cobrir a análise detalhada do engenheiro. Você concorda com esse procedimento?
+                                                        </div>
+                                                    `);
+                                                    chatBody.scrollTop = chatBody.scrollHeight;
+                                                    
+                                                    // Passo 8: Lead aceita e pergunta valor
+                                                    setTimeout(() => {
+                                                        chatBody.insertAdjacentHTML('beforeend', `<div class="msg sent">Tudo bem. Qual é o valor?</div>`);
+                                                        chatBody.insertAdjacentHTML('beforeend', `<div class="msg received hidden" id="msg-typing-p5"><span class="animate-pulse">Digitando...</span></div>`);
+                                                        chatBody.scrollTop = chatBody.scrollHeight;
+
+                                                        setTimeout(() => {
+                                                            const t5 = document.getElementById('msg-typing-p5');
+                                                            if(t5) t5.classList.remove('hidden');
+                                                        }, 1000);
+
+                                                        // Passo 9: IA informa valor, horário e envia boleto
+                                                        setTimeout(() => {
+                                                            const t5 = document.getElementById('msg-typing-p5');
+                                                            if(t5) t5.classList.add('hidden');
+                                                            
+                                                            chatBody.insertAdjacentHTML('beforeend', `
+                                                                <div class="msg received">
+                                                                    O valor da visita técnica é de R$ 250,00.<br><br>
+                                                                    Tenho um horário disponível para sexta-feira às 15:00 ou às 17:00. Segue o boleto demonstrativo para o pagamento da vistoria:<br>
+                                                                    <div class="bg-slate-800 p-2 rounded-lg flex items-center gap-2 mt-2 mb-2 border border-slate-700 cursor-pointer">
+                                                                        <i class="fa-solid fa-file-pdf text-red-400 text-2xl"></i>
+                                                                        <div class="leading-tight">
+                                                                            <span class="text-xs font-bold text-white block">Boleto_VisitaTecnica.pdf</span>
+                                                                            <span class="text-[9px] text-slate-400">Valor: R$ 250,00</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            `);
+                                                            chatBody.scrollTop = chatBody.scrollHeight;
+
+                                                            // Passo 10: Lead envia comprovante
+                                                            setTimeout(() => {
+                                                                chatBody.insertAdjacentHTML('beforeend', `
+                                                                    <div class="msg sent">
+                                                                        Pode ser sexta às 15:00.<br>
+                                                                        Acabei de pagar, segue o comprovante:<br>
+                                                                        <div class="bg-emerald-900 p-2 rounded-lg flex items-center gap-2 mt-2 border border-emerald-700 cursor-pointer text-left">
+                                                                            <i class="fa-solid fa-receipt text-emerald-400 text-2xl"></i>
+                                                                            <div class="leading-tight">
+                                                                                <span class="text-xs font-bold text-white block">Comprovante_Pago.pdf</span>
+                                                                                <span class="text-[9px] text-emerald-300">Pago com sucesso</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                `);
+                                                                chatBody.insertAdjacentHTML('beforeend', `<div class="msg received hidden" id="msg-typing-p6"><span class="animate-pulse">Digitando...</span></div>`);
+                                                                chatBody.scrollTop = chatBody.scrollHeight;
+
+                                                                setTimeout(() => {
+                                                                    const t6 = document.getElementById('msg-typing-p6');
+                                                                    if(t6) t6.classList.remove('hidden');
+                                                                }, 1000);
+
+                                                                // Passo 11: Fechamento Final da IA
+                                                                setTimeout(() => {
+                                                                    const t6 = document.getElementById('msg-typing-p6');
+                                                                    if(t6) t6.classList.add('hidden');
+                                                                    
+                                                                    chatBody.insertAdjacentHTML('beforeend', `
+                                                                        <div class="msg received">
+                                                                            Já marquei aqui na agenda. O consultor técnico Lucas irá entrar em contato com você. Eu irei lhe mandar mensagem para você com 30 minutos de antecedência e enviarei o contato do Lucas aqui para qualquer dúvida. Mas o Lucas entrará em contato com você para ajustar alguns detalhes que é necessário.<br><br>
+                                                                            <div class="bg-slate-800 p-2 rounded-lg flex items-center gap-3 mt-1 mb-2 border border-slate-700">
+                                                                                <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-xs">L</div>
+                                                                                <div class="leading-tight">
+                                                                                    <span class="text-xs font-bold text-white block">Técnico Lucas</span>
+                                                                                    <span class="text-[9px] text-slate-400">Contato Comercial</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            Esse é o contato do Lucas. Caso você tenha alguma dúvida ou queira falar com ele, é só você mandar mensagem.
+                                                                        </div>
+                                                                    `);
+                                                                    chatBody.scrollTop = chatBody.scrollHeight;
+
+                                                                    // Passo 12: Lead agradece e IA finaliza o atendimento
+                                                                    setTimeout(() => {
+                                                                        chatBody.insertAdjacentHTML('beforeend', `<div class="msg sent">Ok, obrigado.</div>`);
+                                                                        chatBody.insertAdjacentHTML('beforeend', `<div class="msg received hidden" id="msg-typing-p7"><span class="animate-pulse">Digitando...</span></div>`);
+                                                                        chatBody.scrollTop = chatBody.scrollHeight;
+
+                                                                        setTimeout(() => {
+                                                                            const t7 = document.getElementById('msg-typing-p7');
+                                                                            if(t7) t7.classList.remove('hidden');
+                                                                        }, 1000);
+
+                                                                        // Passo 13: Despedida da IA
+                                                                        setTimeout(() => {
+                                                                            const t7 = document.getElementById('msg-typing-p7');
+                                                                            if(t7) t7.classList.add('hidden');
+                                                                            
+                                                                            chatBody.insertAdjacentHTML('beforeend', `
+                                                                                <div class="msg received">
+                                                                                    Obrigado. Nós agradecemos o seu contato e a confiança. Até logo.
+                                                                                </div>
+                                                                                <div class="text-center text-[10px] text-amber-500 my-2 bg-slate-950 py-1.5 px-3 rounded-md w-fit mx-auto border border-amber-500/10 mt-2">
+                                                                                    ✓ Vistoria Paga (R$ 250). Lead High Ticket repassado ao Técnico Lucas.
+                                                                                </div>
+                                                                            `);
+                                                                            chatBody.scrollTop = chatBody.scrollHeight;
+                                                                        }, 2500);
+
+                                                                    }, 2500);
+
+                                                                }, 3500);
+
+                                                            }, 3500);
+
+                                                        }, 2500);
+                                                    }, 3500);
+
+                                                }, 2500);
+                                            }, 3500);
+
+                                        }, 2500);
+
+                                    }, 2000);
+                                }, 2500);
+
+                            }, 3000);
+                        }, 3500);
+                    }, 2000);
+
+                }, 1500);
+            }, 1000);
+
+            return;
+        }
 
         // NOVO FLUXO ESPECÍFICO PARA MATERIAL DE CONSTRUÇÃO
         if (key === 'construcao') {
@@ -1134,7 +1374,7 @@
                     Lead enviou uma lista no WhatsApp
                 </div>
                 <div class="msg sent opacity-0" id="msg-sent-lead">
-                    Olá! Preciso de um orçamento:<br><br>
+                    Olá, sou a Michele! Preciso de um orçamento:<br><br>
                     - 500 tijolos<br>
                     - 100 TIJOLOS PEQUENOS<br>
                     - 2 MT AREIA<br>
@@ -1162,7 +1402,7 @@
                 
                 chatBody.insertAdjacentHTML('beforeend', `
                     <div class="msg received">
-                        Olá! Sou o assistente de vendas. Já calculei sua lista de materiais! 🧱<br><br>
+                        Olá, Michele! Sou o assistente de vendas. Já calculei sua lista de materiais! 🧱<br><br>
                         Aqui está o seu orçamento detalhado:<br>
                         <div class="bg-slate-800 p-2 rounded-lg flex items-center gap-2 mt-2 border border-slate-700 cursor-pointer">
                             <i class="fa-solid fa-file-pdf text-red-400 text-2xl"></i>
@@ -1212,7 +1452,7 @@
                                 
                                 chatBody.insertAdjacentHTML('beforeend', `
                                     <div class="msg received">
-                                        Ok, um de nossos vendedores entrará em contato com voce para facilitar sua compra e voce ter o melhor na compra, até já! 
+                                        Ok, um de nossos vendedores entrará em contato com você para facilitar sua compra e você ter o melhor que podemos oferecer. Até já.
                                     </div>
                                     <div class="text-center text-[10px] text-amber-500 my-2 bg-slate-950 py-1.5 px-3 rounded-md w-fit mx-auto border border-amber-500/10 mt-2">
                                         ✓ Lead "Pesquisa de Preço". Vendedor notificado para contato humano.
@@ -1297,11 +1537,8 @@
                         setTimeout(() => {
                             document.getElementById('msg-typing-c2').classList.add('hidden');
                             
-                            const now = new Date();
-                            const h1 = now.getHours() + 1 > 18 ? "Amanhã às 09:00" : `Hoje às ${now.getHours() + 1}:00`;
-                            const h2 = now.getHours() + 2 > 18 ? "Amanhã às 14:30" : `Hoje às ${now.getHours() + 2}:30`;
-                            opt1 = h1;
-                            opt2 = h2;
+                            opt1 = "09:30";
+                            opt2 = "14:30";
 
                             chatBody.innerHTML += `
                                 <div class="msg received">
@@ -1313,8 +1550,8 @@
                                 </div>
                             `;
                             
-                            document.getElementById('btn-opt1').textContent = h1;
-                            document.getElementById('btn-opt2').textContent = h2;
+                            document.getElementById('btn-opt1').textContent = opt1;
+                            document.getElementById('btn-opt2').textContent = opt2;
                             chatActions.classList.remove('hidden');
                             chatBody.scrollTop = chatBody.scrollHeight;
                         }, 3500);
@@ -1387,7 +1624,13 @@
 
         const leadReply = document.createElement('div');
         leadReply.className = "msg sent";
-        leadReply.innerHTML = `Pode ser <b>${selectedTime}</b>. Vou enviar os detalhes aqui.`;
+        
+        if (currentFlowKey === 'calcados') {
+            leadReply.innerHTML = `Pode ser <b>${selectedTime}</b>.`;
+        } else {
+            leadReply.innerHTML = `Pode ser <b>${selectedTime}</b>. Vou enviar os detalhes aqui.`;
+        }
+        
         chatBody.appendChild(leadReply);
 
         const typing = document.createElement('div');
@@ -1401,16 +1644,28 @@
             chatBody.removeChild(typing);
             const iaConfirm = document.createElement('div');
             iaConfirm.className = "msg received";
-            iaConfirm.innerHTML = `
-                Perfeito! Reservado para <b>${selectedTime}</b>. 📅<br><br>
-                Pode enviar as informações aqui. Nosso time comercial vai avaliar os dados e falará com você nesse horário para avançarmos no negócio.<br><br>
-                Muito obrigado e até logo! ✨
-            `;
+            
+            if (currentFlowKey === 'calcados') {
+                iaConfirm.innerHTML = `
+                    Obrigado. O nosso consultor irá entrar em contato com você no horário predefinido e com 15 minutos de antecedência eu enviarei para você um lembrete, Até já Sr Osvaldo
+                `;
+            } else {
+                iaConfirm.innerHTML = `
+                    Perfeito! Reservado para <b>${selectedTime}</b>. 📅<br><br>
+                    Pode enviar as informações aqui. Nosso time comercial vai avaliar os dados e falará com você nesse horário para avançarmos no negócio.<br><br>
+                    Muito obrigado e até logo! ✨
+                `;
+            }
             chatBody.appendChild(iaConfirm);
             
             const systemLog = document.createElement('div');
             systemLog.className = "text-center text-[10px] text-green-500 my-2 bg-slate-950 py-1.5 px-3 rounded-md w-fit mx-auto border border-green-500/10";
-            systemLog.textContent = `✓ Qualificado! Lead transferido ao CRM e Reunião Agendada.`;
+            
+            if (currentFlowKey === 'calcados') {
+                systemLog.textContent = `✓ Agendado para ${selectedTime} e lembrete configurado.`;
+            } else {
+                systemLog.textContent = `✓ Qualificado! Lead transferido ao CRM e Reunião Agendada.`;
+            }
             chatBody.appendChild(systemLog);
 
             chatBody.scrollTop = chatBody.scrollHeight;
@@ -1420,8 +1675,6 @@
 
 </body>
 </html>
-
-
 
 
 
